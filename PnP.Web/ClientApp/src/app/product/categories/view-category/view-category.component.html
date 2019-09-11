@@ -1,0 +1,25 @@
+<div class="banner-top">
+  <div class="container">
+    <h3>Product Categories</h3>
+    <h4><a routerLink="/">Home</a><label>/</label>Product Categories</h4>
+    <div class="clearfix"> </div>
+  </div>
+</div>
+
+<div class="kic-top ">
+  <div class="container ">
+    <!--<div class="kic ">
+      <h3>Popular Categories</h3>
+    </div>-->
+
+    <div class="col-md-4 kic-top1" *ngFor="let cat of categories">
+      <a [routerLink]="['/subcategories/', cat.Slug]">
+
+        <img src="{{cat.Image}}" class="img-responsive" alt="" />
+
+        <h6>{{cat.Title}}</h6>
+        <!--<p>{{cat.Description}}</p>-->
+      </a>
+    </div>
+  </div>
+</div>

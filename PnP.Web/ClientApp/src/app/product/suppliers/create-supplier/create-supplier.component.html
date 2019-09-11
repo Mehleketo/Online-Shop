@@ -1,0 +1,62 @@
+<div class="form-w3agile">
+  <h3>Add Product</h3>
+  <form [formGroup]="supplierForm" (ngSubmit)="onSubmit()">
+    <!--<div *ngIf="errors" class="invalid-feedback">
+      <div *ngIf="error">{{ error }}</div>
+    </div>-->
+
+    <div class="form-group">
+      <label for="companyName">Company Name</label>
+      <input type="text" value="Company Name" formControlName="companyName" id="companyName" required="" class="form-control" />
+    </div>
+
+    <div class="form-group">
+      <label for="contactName">Contact Name</label>
+      <input type="text" value="Contact Name" formControlName="contactName" id="contactName" required="" class="form-control" />
+    </div>
+
+    <div class="form-group">
+      <label for="contactTitle">Contact Title</label>
+      <input type="text" value="Contact Title" formControlName="contactTitle" name="contactTitle" required="" class="form-control" />
+    </div>
+
+    <div class="form-group">
+      <label for="address">Address</label>
+      <input type="text" value="Address" formControlName="address" name="address" required="" class="form-control" />
+    </div>
+
+    <div class="form-group">
+      <label for="city">City</label>
+      <input type="text" value="City" formControlName="city" name="city" required="" class="form-control" />
+    </div>
+
+    <div class="form-group">
+      <label for="province">Province</label>
+      <input type="text" value="Province" formControlName="province" name="province" required="" class="form-control" />
+    </div>
+
+    <div class="form-group">
+      <label for="emailAddress">Email Address</label>
+      <input type="text" value="Email Address" formControlName="emailAddress" name="emailAddress" required="" class="form-control" />
+    </div>
+
+    <div class="form-group">
+      <label for="phoneNumber">Phone Number</label>
+      <input type="text" value="Phone Number" formControlName="phoneNumber" name="phoneNumber" required="" class="form-control" />
+    </div>
+
+    <div class="form-group">
+      <label for="faxNumber">Fax Number</label>
+      <input type="text" value="Fax Number" formControlName="faxNumber" name="faxNumber" required="" class="form-control" />
+    </div>
+
+    <div class="form-group">
+      <label for="homePage">Home Page</label>
+      <input type="text" value="Home Page" formControlName="homePage" name="homePage" required="" class="form-control" />
+    </div>
+
+    <div class="form-group">
+      <button type="submit" [disabled]="supplierForm.invalid || loading" class="btn btn-default">Submit &nbsp;&nbsp; <i class="fa fa-spinner fa-spin fa-fw" *ngIf="loading"></i></button>
+    </div>
+  </form>
+</div>

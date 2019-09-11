@@ -1,0 +1,81 @@
+<div class="banner-top">
+  <div class="container">
+    <h3>Manage Products</h3>
+    <h4><a routerLink="/">Home</a><label>/</label>Manage Products</h4>
+    <div class="clearfix"> </div>
+  </div>
+</div>
+
+<div class="container">
+  <section id="tables">
+    <!--<div class="page-header">
+      <h3 class="bars">Product Categories</h3>
+    </div>-->
+    <div class="bs-docs-example">
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th scope="col">Company Name</th>
+            <th scope="col">Contact Name</th>
+            <th scope="col">Contact Title</th>
+            <th scope="col">Address</th>
+            <th scope="col">City</th>
+            <th scope="col">Province</th>
+            <th scope="col">Email Address</th>
+            <th scope="col">Phone Number</th>
+            <th scope="col">Fax Number</th>
+            <th scope="col">Home Page</th>
+            <th scope="col">Slug</th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let supplier of suppliers">
+            <td>{{supplier.CompanyName}}</td>
+            <td>{{supplier.ContactName}}</td>
+            <td>{{supplier.ContactTitle}}</td>
+            <td>{{supplier.Address}}</td>
+            <td>{{supplier.City}}</td>
+            <td>{{supplier.Province}}</td>
+            <td>{{supplier.EmailAddress}}</td>
+            <td>{{supplier.PhoneNumber}}</td>
+            <td>{{supplier.FaxNumber}}</td>
+            <td>{{supplier.HomePage}}</td>
+            <td>{{supplier.Slug}}</td>
+            <td>
+              <button type="button" [disabled]="loading" class="btn btn-default" data-toggle="modal" (click)="onUpdate(supplier.Id)">Update</button>
+              &nbsp;
+              <button type="button" [disabled]="loading" class="btn btn-default" data-toggle="modal" (click)="onDelete(supplier.Id)">Delete</button>
+              <!--&nbsp;
+    <button type="button" [disabled]="loading" class="btn btn-default" data-toggle="modal" (click)="onManage(product.Slug)">Manage</button>-->
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="row">
+      <div class="form-group">
+        <button type="button" class="btn btn-default" data-toggle="modal" data-target=".bs-example-modal-lg">Add New Product</button>
+      </div>
+
+      <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+        <div class="modal-dialog modal-lg" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            </div>
+
+            <div class="modal-body">
+              <create-product></create-product>
+            </div>
+            <!--<div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Save changes</button>
+            </div>-->
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+</div>

@@ -1,0 +1,44 @@
+<div class="banner-top">
+  <div class="container">
+    <h3>Product</h3>
+    <h4><a [routerLink]="['/']">Home</a><label>/</label>Product</h4>
+    <div class="clearfix"> </div>
+  </div>
+</div>
+<div class="single">
+  <div class="container">
+    <div class="single-top-main">
+      <div class="col-md-5 single-top">
+        <div class="single-w3agile">
+          <div id="picture-frame">
+            <img src="{{product.Image}}" alt="" class="img-responsive" />
+          </div>
+        </div>
+      </div>
+      <div class="col-md-7 single-top-left ">
+        <div class="single-right">
+          <h3>{{product.Title}}</h3>
+          <div class="pr-single">
+            <p class="reduced">
+              <del>{{product.OriginalPrice}}</del>{{product.DiscountedPrice}}
+            </p>
+          </div>
+          <div class="block block-w3">
+            <div class="starbox small ghosting"> </div>
+          </div>
+          <p class="in-pa">{{product.Description}}</p>
+          <div class="add add-3">
+            <button type="button" class="btn btn-danger my-cart-btn my-cart-b" (click)="addToCart(product.Id)">Add to Cart</button>
+            <button type="button" class="btn btn-danger my-cart-btn my-cart-b" (click)="addToFavourites(product.Id)">Add to Favourites</button>
+          </div>
+          <div class="clearfix"> </div>
+        </div>
+      </div>
+      <div class="clearfix"> </div>
+    </div>
+  </div>
+</div>
+
+<view-reviews [productId]="productId"></view-reviews>
+
+<create-reviews></create-reviews>

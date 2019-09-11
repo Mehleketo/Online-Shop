@@ -1,0 +1,39 @@
+<div class="banner-top">
+  <div class="container">
+    <h3>Favourite Products</h3>
+    <h4><a routerLink="/">Home</a><label>/</label>Favourite Products</h4>
+    <div class="clearfix"> </div>
+  </div>
+</div>
+
+<div class="product">
+  <div class="container">
+    <div class=" con-w3l agileinf">
+      <div class="col-md-3 pro-1" *ngFor="let favourite of favourites">
+        <div class="col-m">
+          <a href="#" data-toggle="modal" data-target="#myModal1" class="offer-img">
+            <img src="{{favourite.Product.Image}}" class="img-responsive" alt="">
+          </a>
+          <div class="mid-1">
+            <div class="women">
+              <h6><a [routerLink]="['/product/', favourite.Product.Slug]">{{favourite.Product.Title}}</a></h6>
+            </div>
+            <div class="mid-2">
+              <p><label>{{favourite.Product.DiscountedPrice}}</label><em class="item_price">{{favourite.Product.OriginalPrice}}</em></p>
+              <div class="block">
+                <div class="starbox small ghosting"> </div>
+              </div>
+              <div class="clearfix"></div>
+            </div>
+            <div class="add">
+              <button type="button" class="btn btn-danger my-cart-btn my-cart-b" (click)="addToCart(favourite.Product.Id)">Add to Cart</button>
+              <button type="button" class="btn btn-danger my-cart-btn my-cart-b" (click)="removeFromFavourites(favourite.Product.Id)">Remove From Favourites</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</div>

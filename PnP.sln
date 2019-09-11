@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29102.190
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PnP.Data", "PnP.Data\PnP.Data.csproj", "{0F9A365E-B2F1-4EEB-BCB3-0622092F8CA9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PnP.Services", "PnP.Services\PnP.Services.csproj", "{419602D9-88D0-4AD1-B460-1ADD62F0D5CD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PnP.Web", "PnP.Web\PnP.Web.csproj", "{0B8B9231-1045-41DB-B66A-827C429AB87D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0F9A365E-B2F1-4EEB-BCB3-0622092F8CA9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0F9A365E-B2F1-4EEB-BCB3-0622092F8CA9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0F9A365E-B2F1-4EEB-BCB3-0622092F8CA9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0F9A365E-B2F1-4EEB-BCB3-0622092F8CA9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{419602D9-88D0-4AD1-B460-1ADD62F0D5CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{419602D9-88D0-4AD1-B460-1ADD62F0D5CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{419602D9-88D0-4AD1-B460-1ADD62F0D5CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{419602D9-88D0-4AD1-B460-1ADD62F0D5CD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0B8B9231-1045-41DB-B66A-827C429AB87D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0B8B9231-1045-41DB-B66A-827C429AB87D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0B8B9231-1045-41DB-B66A-827C429AB87D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0B8B9231-1045-41DB-B66A-827C429AB87D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C8420107-1997-4FD3-9CAC-6614BD29C632}
+	EndGlobalSection
+EndGlobal

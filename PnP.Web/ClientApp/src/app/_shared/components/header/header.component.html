@@ -1,0 +1,160 @@
+<!--<a href="/"><img src="../../../../assets/images/download.png" class="img-head" alt=""></a>-->
+
+<div class="header">
+  <div class="container">
+    <div class="logo">
+      <h1><a routerLink="/"><b>T<br>H<br>E</b>Online Store<span>The Best Supermarket</span></a></h1>
+    </div>
+
+    <div class="head-t">
+      <ul class="card">
+        <li *ngIf="!accountsService.loggedIn()"><a routerLink="/signin"><i class="fa fa-user" aria-hidden="true"></i>Login</a></li>
+        <li *ngIf="!accountsService.loggedIn()"><a routerLink="/signup"><i class="fa fa-arrow-right" aria-hidden="true"></i>Register</a></li>
+        <li *ngIf="accountsService.loggedIn()"><a routerLink="/favourites"><i class="fa fa-heart" aria-hidden="true"></i>Favourites</a></li>
+        <li *ngIf="accountsService.loggedIn()"><a routerLink="/orderhistory"><i class="fa fa-file-text-o" aria-hidden="true"></i>Order History</a></li>
+        <li *ngIf="accountsService.loggedIn()"><a routerLink="/grocerylist"><i class="fa fa-ship" aria-hidden="true"></i>Grocery List</a></li>
+        <li *ngIf="accountsService.loggedIn()"><a (click)="onLogoutClick()" href="#"><i class="fa fa-ship" aria-hidden="true"></i>Logout</a></li>
+      </ul>
+    </div>
+
+    <!--<div class="header-ri">
+      <ul class="social-top">
+        <li><a href="#" class="icon facebook"><i class="fa fa-facebook" aria-hidden="true"></i><span></span></a></li>
+        <li><a href="#" class="icon twitter"><i class="fa fa-twitter" aria-hidden="true"></i><span></span></a></li>
+        <li><a href="#" class="icon pinterest"><i class="fa fa-pinterest-p" aria-hidden="true"></i><span></span></a></li>
+        <li><a href="#" class="icon dribbble"><i class="fa fa-dribbble" aria-hidden="true"></i><span></span></a></li>
+      </ul>
+    </div>-->
+
+    <div class="nav-top">
+      <nav class="navbar navbar-default">
+        <div class="navbar-header nav_2">
+          <button type="button" class="navbar-toggle collapsed navbar-toggle1" data-toggle="collapse" data-target="#bs-megadropdown-tabs">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+
+
+        </div>
+
+        <div class="collapse navbar-collapse" id="bs-megadropdown-tabs">
+          <ul class="nav navbar-nav ">
+            <li routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}"><a routerLink="/" class="hyper "><span>Home</span></a></li>
+
+            <li class="dropdown" *ngIf="accountsService.loggedIn()" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
+              <a href="#" class="dropdown-toggle  hyper" data-toggle="dropdown"><span>Shop<b class="caret"></b></span></a>
+              <ul class="dropdown-menu multi">
+                <div class="row">
+                  <div class="col-sm-3">
+                    <ul class="multi-column-dropdown">
+                      <li><a routerLink="/products/all"><i class="fa fa-angle-right" aria-hidden="true"></i>View All Products</a></li>
+                      <li><a routerLink="/categories"><i class="fa fa-angle-right" aria-hidden="true"></i>View Categories</a></li>
+                    </ul>
+                  </div>
+                  <div class="clearfix"></div>
+                </div>
+              </ul>
+            </li>
+
+            <li class="dropdown" *ngIf="accountsService.loggedIn()" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
+              <a href="#" class="dropdown-toggle  hyper" data-toggle="dropdown"><span>Manage<b class="caret"></b></span></a>
+              <ul class="dropdown-menu multi">
+                <div class="row">
+                  <div class="col-sm-3">
+                    <ul class="multi-column-dropdown">
+                      <li><a routerLink="/products/manage"><i class="fa fa-angle-right" aria-hidden="true"></i>Products</a></li>
+                      <li><a routerLink="/categories/manage"><i class="fa fa-angle-right" aria-hidden="true"></i>Product Categories</a></li>
+                      <li><a routerLink="/subcategories/manage"> <i class="fa fa-angle-right" aria-hidden="true"></i>Product Subcategories</a></li>
+                    </ul>
+
+                  </div>
+                  <!--<div class="col-sm-3">
+
+                    <ul class="multi-column-dropdown">
+                      <li><a href="kitchen.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Breakfast &amp; Cereal</a></li>
+                      <li><a href="kitchen.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Snacks</a></li>
+                      <li><a href="kitchen.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Spices</a></li>
+                      <li><a href="kitchen.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Biscuit &amp; Cookie</a></li>
+                      <li><a href="kitchen.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Sweets</a></li>
+
+                    </ul>
+
+                  </div>
+                  <div class="col-sm-3">
+
+                    <ul class="multi-column-dropdown">
+                      <li><a href="kitchen.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Pickle & Condiment</a></li>
+                      <li><a href="kitchen.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Instant Food</a></li>
+                      <li><a href="kitchen.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Dry Fruit</a></li>
+                      <li><a href="kitchen.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Tea &amp; Coffee</a></li>
+
+                    </ul>
+                  </div>
+                  <div class="col-sm-3 w3l">
+                    <a href="kitchen.html"><img src="images/me.png" class="img-responsive" alt=""></a>
+                  </div>-->
+                  <div class="clearfix"></div>
+                </div>
+              </ul>
+            </li>
+
+            <!--<li class="dropdown" routerLinkActive="active" [routerLinkActiveOptions] = "{exact:true}">
+              <a href="#" class="dropdown-toggle  hyper" data-toggle="dropdown"><span>Kitchen<b class="caret"></b></span></a>
+              <ul class="dropdown-menu multi">
+                <div class="row">
+                  <div class="col-sm-3">
+                    <ul class="multi-column-dropdown">
+
+                      <li><a href="kitchen.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Water & Beverages</a></li>
+                      <li><a href="kitchen.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Fruits & Vegetables</a></li>
+                      <li><a href="kitchen.html"> <i class="fa fa-angle-right" aria-hidden="true"></i>Staples</a></li>
+                      <li><a href="kitchen.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Branded Food</a></li>
+
+                    </ul>
+
+                  </div>
+                  <div class="col-sm-3">
+
+                    <ul class="multi-column-dropdown">
+                      <li><a href="kitchen.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Breakfast &amp; Cereal</a></li>
+                      <li><a href="kitchen.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Snacks</a></li>
+                      <li><a href="kitchen.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Spices</a></li>
+                      <li><a href="kitchen.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Biscuit &amp; Cookie</a></li>
+                      <li><a href="kitchen.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Sweets</a></li>
+
+                    </ul>
+
+                  </div>
+                  <div class="col-sm-3">
+
+                    <ul class="multi-column-dropdown">
+                      <li><a href="kitchen.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Pickle & Condiment</a></li>
+                      <li><a href="kitchen.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Instant Food</a></li>
+                      <li><a href="kitchen.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Dry Fruit</a></li>
+                      <li><a href="kitchen.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Tea &amp; Coffee</a></li>
+
+                    </ul>
+                  </div>
+                  <div class="col-sm-3 w3l">
+                    <a href="kitchen.html"><img src="images/me.png" class="img-responsive" alt=""></a>
+                  </div>
+                  <div class="clearfix"></div>
+                </div>
+              </ul>
+            </li>-->
+
+            <li routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}"><a routerLink="/contactus" class="hyper"><span>Contact Us</span></a></li>
+          </ul>
+        </div>
+      </nav>
+
+      <div class="cart">
+        <span class="fa fa-shopping-cart my-cart-icon"><span class="badge badge-notify my-cart-badge"></span></span>
+      </div>
+
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</div>

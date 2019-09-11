@@ -1,0 +1,62 @@
+<div class="form-w3agile">
+  <h3>Add Product</h3>
+  <form [formGroup]="productForm" (ngSubmit)="onSubmit()">
+    <!--<div *ngIf="errors" class="invalid-feedback">
+    <div *ngIf="error">{{ error }}</div>
+  </div>-->
+
+    <div class="form-group">
+      <label for="title">Title</label>
+      <input type="text" value="Title" formControlName="title" id="title" required="" class="form-control" />
+    </div>
+
+    <div class="form-group">
+      <label for="description">Description</label>
+      <input type="text" value="Description" formControlName="catdescription" id="description" required="" class="form-control" />
+    </div>
+
+    <div class="form-group">
+      <label for="barcode">Barcode</label>
+      <input type="text" value="Barcode" formControlName="barcode" name="barcode" required="" class="form-control" />
+    </div>
+
+    <div class="form-group">
+      <label for="features">Features</label>
+      <input type="text" value="Features" formControlName="features" name="features" required="" class="form-control" />
+    </div>
+
+    <div class="form-group">
+      <label for="usage">Usage</label>
+      <input type="text" value="Usage" formControlName="usage" name="usage" required="" class="form-control" />
+    </div>
+
+    <div class="form-group">
+      <label for="price">Price</label>
+      <input type="text" value="Price" formControlName="price" name="price" required="" class="form-control" />
+    </div>
+
+    <div class="form-group">
+      <label for="cmbSubcategory">Product Subcategory</label>
+      <select class="form-control" id="cmbSubcategory" formControlName="cmbSubcategory">
+        <option *ngFor="let cat of subcategories" [value]="cat.Id">{{cat.Title}}</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="cmbSupplier">Product Supplier</label>
+      <select class="form-control" id="cmbSupplier" formControlName="cmbSupplier">
+        <option *ngFor="let supplier of suppliers" [value]="supplier.Id">{{supplier.CompanyName}}</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="avatar">Image</label>
+      <input type="file" id="avatar" (change)="onFileChange($event)" #fileInput>
+      <button type="button" class="btn btn-sm btn-default" (click)="clearFile()">clear file</button>
+    </div>
+
+    <div class="form-group">
+      <button type="submit" [disabled]="productForm.invalid || loading" class="btn btn-default">Submit &nbsp;&nbsp; <i class="fa fa-spinner fa-spin fa-fw" *ngIf="loading"></i></button>
+    </div>
+  </form>
+</div>

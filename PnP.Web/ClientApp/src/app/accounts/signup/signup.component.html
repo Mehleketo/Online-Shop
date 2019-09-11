@@ -1,0 +1,58 @@
+<div class="banner-top">
+  <div class="container">
+    <h3>Register</h3>
+    <h4><a routerLink="/">Home</a><label>/</label>Register</h4>
+    <div class="clearfix"> </div>
+  </div>
+</div>
+
+<div class="login">
+  <div class="main-agileits">
+    <div class="form-w3agile">
+      <h3>Register</h3>
+      <form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+          <label for="firstname">First Name</label>
+          <input type="text" class="form-control" value="First Name" id="firstname" formControlName="firstname" name="First Name" required="" />
+        </div>
+
+        <div class="form-group">
+          <label for="lastname">Last Name</label>
+          <input type="text" class="form-control" value="Last Name" id="lastname" formControlName="lastname" required="" />
+        </div>
+
+        <div class="form-group">
+          <label for="identitype">Identification Type</label>
+          <select class="form-control" id="identitype" formControlName="identitype">
+            <option *ngFor="let idType of idTypes" [value]="idType.Id">{{idType.Title}}</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="idnumber">ID Number</label>
+          <input type="text" class="form-control" value="ID Number" id="idnumber" formControlName="idnumber" required="" />
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="text" class="form-control" value="Email" id="email" formControlName="email" required="" />
+        </div>
+
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" class="form-control" value="Password" id="password" formControlName="password" required="" />
+        </div>
+
+        <div class="form-group">
+          <button type="submit" [disabled]="signupForm.invalid || loading" class="btn btn-default">Submit &nbsp;&nbsp; <i class="fa fa-spinner fa-spin fa-fw" *ngIf="loading"></i></button>
+        </div>
+      </form>
+    </div>
+
+    <div class="forg">
+      <a href="#" class="forg-left">Forgot Password</a>
+      <a routerLink="/signin" class="forg-right">Login</a>
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</div>

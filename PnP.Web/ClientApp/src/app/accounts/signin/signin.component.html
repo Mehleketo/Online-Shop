@@ -1,0 +1,40 @@
+<div class="banner-top">
+  <div class="container">
+    <h3>Signin</h3>
+    <h4><a routerLink="/">Home</a><label>/</label>Signin</h4>
+    <div class="clearfix"> </div>
+  </div>
+</div>
+
+<div class="login">
+  <div class="main-agileits">
+    <div class="form-w3agile">
+      <h3>Login</h3>
+      <form [formGroup]="signinForm" (ngSubmit)="onSubmit()">
+        <div *ngIf="errors" class="invalid-feedback">
+          <div *ngIf="error">{{ error }}</div>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="text" class="form-control" value="Email" id="email" formControlName="email" required="" />
+        </div>
+
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" class="form-control" value="Password" id="password" formControlName="password" required="" />
+        </div>
+
+        <div class="form-group">
+          <button type="submit" [disabled]="signinForm.invalid || loading" class="btn btn-default">Submit &nbsp;&nbsp; <i class="fa fa-spinner fa-spin fa-fw" *ngIf="loading"></i></button>
+        </div>
+      </form>
+    </div>
+
+    <div class="forg">
+      <a href="#" class="forg-left">Forgot Password</a>
+      <a routerLink="/signup" class="forg-right">Register</a>
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</div>
